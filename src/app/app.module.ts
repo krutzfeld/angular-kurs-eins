@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ],
     imports: [
         BrowserModule,
+        CommonModule,
         FormsModule,
         MatInputModule,
         MatCardModule,
