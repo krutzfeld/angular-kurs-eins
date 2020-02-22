@@ -1,4 +1,4 @@
-<form class="game-form" (ngSubmit)="onSubmit()">
+<form class="game-form" (ngSubmit)="onSubmit()" #gameForm="ngForm">
     <h2>Wieviel ist {{faktor1}} * {{faktor2}}</h2>
 
     <div>
@@ -10,11 +10,15 @@
     </div>
 
     <div>
-        <button type="submit">Prüfe Ergebnis</button>
+        <button class="btn btn-outline-danger" type="submit">Prüfe Ergebnis</button>
     </div>
 
-    <div class="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
+    <div *ngIf="isCorrect" class="alert alert-primary" role="alert" >
+        Korrekt
+    </div>
+
+    <div *ngIf="!isCorrect && gameForm.touched"  class="alert alert-primary" role="alert">
+        Falsch
     </div>
 
 </form>
