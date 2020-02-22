@@ -1,16 +1,20 @@
-<mat-toolbar color="primary">Erstes Spiel</mat-toolbar>
 <form class="game-form" (ngSubmit)="onSubmit()">
     <h2>Wieviel ist {{faktor1}} * {{faktor2}}</h2>
 
     <div>
-        <mat-form-field>
-            <mat-label for="produktEingabe">Ergebnis</mat-label>
-            <input [(ngModel)]="produktEingabe" name="produktEingabe" matInput placeholder="0">
-        </mat-form-field>
+        <div>
+            <label for="produktEingabe">Ergebnis</label>
+            <input id="produktEingabe"
+                   [(ngModel)]="produktEingabe" name="produktEingabe" placeholder="0">
+        </div>
     </div>
 
     <div>
-        <button mat-raised-button color="primary" type="submit">Prüfe Ergebnis</button>
+        <button type="submit">Prüfe Ergebnis</button>
+    </div>
+
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
     </div>
 
 </form>

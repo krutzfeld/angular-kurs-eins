@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FaktorService} from './faktor.service';
-import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-root',
@@ -13,7 +12,7 @@ export class AppComponent implements OnInit {
     produktEingabe: number;
     isCorrect: boolean;
 
-    constructor(private faktor: FaktorService, private _snackBar: MatSnackBar) {
+    constructor(private faktor: FaktorService) {
 
     }
 
@@ -27,11 +26,6 @@ export class AppComponent implements OnInit {
         this.handleCorrect(this.isCorrect);
     }
 
-    openSnackBar(message: string) {
-        this._snackBar.open(message, null, {
-            duration: 2000,
-        });
-    }
 
     private handleCorrect(isCorrect: boolean) {
         let msg;
@@ -40,6 +34,5 @@ export class AppComponent implements OnInit {
         } else {
             msg = 'Das ist falsch';
         }
-        this.openSnackBar(msg);
     }
 }

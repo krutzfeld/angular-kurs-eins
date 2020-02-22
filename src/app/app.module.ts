@@ -20,12 +20,6 @@ import {CommonModule} from '@angular/common';
         BrowserModule,
         CommonModule,
         FormsModule,
-        MatInputModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatSnackBarModule,
         BrowserAnimationsModule
     ],
     providers: [],
