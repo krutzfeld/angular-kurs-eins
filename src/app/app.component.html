@@ -1,24 +1,10 @@
-<form class="game-form" (ngSubmit)="onSubmit()" #gameForm="ngForm">
-    <h2>Wieviel ist {{faktor1}} * {{faktor2}}</h2>
+<ul class="nav navbar-dark border-bottom">
+    <li class="nav-item">
+        <span class="nav-link active">Yupdi</span>
+    </li>
 
-    <div>
-        <div>
-            <label for="produktEingabe">Ergebnis</label>
-            <input id="produktEingabe"
-                   [(ngModel)]="produktEingabe" name="produktEingabe" placeholder="0">
-        </div>
-    </div>
+</ul>
 
-    <div>
-        <button class="btn btn-outline-danger" type="submit">Prüfe Ergebnis</button>
-    </div>
-
-    <div *ngIf="isCorrect" class="alert alert-primary" role="alert" >
-        Korrekt
-    </div>
-
-    <div *ngIf="!isCorrect && gameForm.touched"  class="alert alert-primary" role="alert">
-        Falsch
-    </div>
-
-</form>
+<div>
+    <app-uebung-eins></app-uebung-eins>
+</div>
