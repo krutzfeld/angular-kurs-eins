@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {uebungEins} from './uebung/uebung-eins';
+import {uebungEins} from '../uebung-eins';
 
 @Injectable({
     providedIn: 'root'

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FaktorService} from '../faktor.service';
+import {FaktorService} from '../service/faktor.service';
 
 @Component({
   selector: 'app-uebung-eins',
@@ -26,7 +26,6 @@ export class UebungEinsComponent implements OnInit {
     this.isCorrect = this.faktor.berechneProdukt(this.faktor1, this.faktor2, this.produktEingabe);
     this.handleCorrect(this.isCorrect);
   }
-
 
   private handleCorrect(isCorrect: boolean) {
     let msg;
