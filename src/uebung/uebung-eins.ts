@@ -15,7 +15,9 @@
  *  (1*2) wird zuerst ausgewertet, deshalb steht dort immer 2==2.
  *  Das ergibt den Wahrheitswert 'wahr'.
  *  Was musst du hier ersetzen damit die Funktion auf unser Beispiel passt?
+ * 
+ * Wenn du fertig bist schick uns diese Funktion einfach per Mail und wir schalten die nächste Lektion frei.
  */
 export function uebungEins(faktor1, faktor2, eingabeProdukt) {
-    return (1*2) == 1 ;
+    return (1*2) == 1;
 }
