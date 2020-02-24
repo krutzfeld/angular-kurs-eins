@@ -6,3 +6,8 @@ $theme-colors: (
 @import "node_modules/bootstrap/scss/bootstrap";
 
 
+.text-style-code {
+  font-family: Consolas;
+  background: lightgrey;
+  padding: 2px;
+}

@@ -1,30 +1,79 @@
 <div class="container">
-    <h1>Übung - 1</h1>
+    <h1>Lektion #1</h1>
 
-    <h2>Wieviel ist {{faktor1}} * {{faktor2}}?</h2>
+    <div class="row">
+        <div class="col-6">
+            <div class="card ">
+                <div class="card-header">Erklärung</div>
+                <div class="card-body">
+                    <h5 class="card-title">Aufgabe</h5>
+                    <div class="card-text">
+                        <p>Rechts siehst du ein kleines Programm, welches prüft, ob die Eingabe des Nutzers dem
+                            Produkt der beiden Zufallszahlen entspricht.
+                            Die Funktion gibt aktuell immer aus, dass die Eingabe falsch ist. :(</p>
 
-    <form class="game-form" (ngSubmit)="onSubmit()" #gameForm="ngForm">
+                        <p class="font-weight-bold">Deine Aufgabe ist es eine vorgefertige Funktion so zu verändern, dass sie
+                            auswertet ob die Nutzereingabe gleich dem Produkt der beiden Zufallszahlen ist.</p>
 
-        <div class="form-group">
-            <label for="produktEingabe">Ergebnis</label>
-            <input id="produktEingabe"
-                   class="form-control"
-                   placeholder="0"
-                   [(ngModel)]="produktEingabe" name="produktEingabe">
-        </div>
+                        <p>Die Funktion findest du in diesem Projektordner unter
+                            <span class="text-style-code font-weight-bold">{{'src/uebung/uebung-eins.ts'}}</span></p>
 
-        <div class="form-group">
-            <button class="btn btn-outline-primary" type="submit">Prüfe Ergebnis</button>
-        </div>
+                        <p>Wenn du etwas veränderst wird Stackblitz deine Änderungen sofort einbinden.</p>
 
-        <div class="form-group">
-            <div *ngIf="isCorrect" class="alert alert-success" role="alert">
-                Korrekt
+                        <p>Wenn du fertig bist, sende uns die fertige Lösung einfach per Mail an <a
+                                href="mailto:korrektur@info.de">korrektur@info.de</a> und wir schalten dich für die
+                            nächste
+                            Lektion frei.</p>
+
+                        <p>Die Funktion wird ausgewertet sobald man die Eingabe bestätigt. Du musst dich nicht um
+                            den Aufbau kümmern, lediglich die eine Funktion ändern. Falls du Hilfe brauchst findest
+                            du hier <a routerLink="hilfe">Hilfe</a>. Oder du schreibst und eine Mail an: <a
+                                    href="mailto:hilfe@info.de">hilfe@info.de</a></p>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div *ngIf="!isCorrect && gameForm.touched" class="alert alert-danger" role="alert">
-                Falsch
+        <div class="col-6">
+            <div class="card ">
+                <div class="card-header">Praktischer Teil</div>
+                <div class="card-body">
+                    <h5 class="card-title">Wieviel ist {{faktor1}} * {{faktor2}}?</h5>
+                    <div class="card-text">
+
+                        <form class="game-form" (ngSubmit)="onSubmit()" #gameForm="ngForm">
+
+                            <div class="form-group">
+                                <label for="produktEingabe">Ergebnis</label>
+                                <input id="produktEingabe"
+                                       class="form-control"
+                                       placeholder="0"
+                                       [(ngModel)]="produktEingabe" name="produktEingabe">
+                            </div>
+
+                            <div class="form-group">
+                                <button class="btn btn-outline-primary"
+                                        placement="bottom"
+                                        ngbTooltip="Ein Click auf den Button ruft Deine Funktion auf."
+                                        type="submit">Prüfe Ergebnis
+                                </button>
+                            </div>
+
+                            <div class="form-group">
+                                <div *ngIf="isCorrect" class="alert alert-success" role="alert">
+                                    Korrekt
+                                </div>
+
+                                <div *ngIf="!isCorrect && gameForm.touched" class="alert alert-danger" role="alert">
+                                    Falsch
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
             </div>
         </div>
-    </form>
+
+    </div>
 </div>

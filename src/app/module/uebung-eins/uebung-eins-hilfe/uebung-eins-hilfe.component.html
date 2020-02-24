@@ -1,0 +1,44 @@
+<div class="container">
+    <h1>Übung - 1 - Hilfestellung</h1>
+
+    <div class="card">
+        <div class="card-header" (click)="isOpen = 0">Hilfe - Syntax</div>
+
+        <div class="card-body" [ngbCollapse]="isOpen !== 0">
+            <h5 class="card-title">Erklärung</h5>
+            <div class="card-text">
+                <p>Sicherlich hat dich die vorgegeben Funktion erst einmal vor ein Rätsel gestellt:</p>
+                <pre class="text-style-code">{{'export function uebungEins(faktor1, faktor2, eingabeProdukt)  { return (1*2) == 2 ;}'}}</pre>
+
+                <p>Programmierung ist das Schreiben von Text. Jedoch muss der Text für den Computer verstehbar sein.
+                    Text ist nur dann für Computer verstehtbar, wenn er sehr strengen Regeln folgt. Dies wird durch
+                    eine ganz bestimmte Anordnung von bestimmten Schlüsselwörtern und-zeichen erreicht. Das ist sehr
+                    unintuitiv, aber lass Dich davon nicht abschrecken - es lohnt sich ;)</p>
+
+                <p>Lass uns einmal diese <a href="https://de.wikipedia.org/wiki/Syntax" target="_blank">Syntax</a> anhand
+                    unseres Beispiels durchgehen.</p>
+
+                <div>Hovere über die Einzelnen Begriffe für Erklärungen</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header" (click)="isOpen = 1">Hilfe - Stackblitz</div>
+
+        <div class="card-body" [ngbCollapse]="isOpen !== 1">
+            <h5 class="card-title">Erklärung</h5>
+            <img src="assets/img/uebung-eins/help-1.jpg" class="card-img-top">
+            <div class="card-text">
+                <p>Stackblitz ist die einfachste Möglichkeit Code interaktiv zu verändern ohne, dass du etwas
+                    installieren musst.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr/>
+
+<div class="container">
+    <app-uebung-eins></app-uebung-eins>
+</div>

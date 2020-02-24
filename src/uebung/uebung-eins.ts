@@ -17,5 +17,5 @@
  *  Was musst du hier ersetzen damit die Funktion auf unser Beispiel passt?
  */
 export function uebungEins(faktor1, faktor2, eingabeProdukt) {
-    return (1*2) == 2 ;
+    return (1*2) == 1 ;
 }
