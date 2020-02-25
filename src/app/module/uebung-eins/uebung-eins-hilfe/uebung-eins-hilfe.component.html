@@ -2,13 +2,13 @@
     <h1>Übung - 1 - Hilfestellung</h1>
 
     <div class="card">
-        <div class="card-header" (click)="isOpen = 0">Hilfe - Syntax</div>
+        <div class="card-header">Hilfe - Syntax</div>
 
-        <div class="card-body" [ngbCollapse]="isOpen !== 0">
+        <div class="card-body">
             <h5 class="card-title">Erklärung</h5>
             <div class="card-text">
                 <p>Sicherlich hat dich die vorgegeben Funktion erst einmal vor ein Rätsel gestellt:</p>
-                <pre class="text-style-code">{{'export function uebungEins(faktor1, faktor2, eingabeProdukt)  { return (1*2) == 2 ;}'}}</pre>
+                <pre class="text-style-code">{{'export function uebungEins(faktor1, faktor2, eingabeProdukt)  { return (1*2) == 1 ;}'}}</pre>
 
                 <p>Programmierung ist das Schreiben von Text. Jedoch muss der Text für den Computer verstehbar sein.
                     Text ist nur dann für Computer verstehtbar, wenn er sehr strengen Regeln folgt. Dies wird durch
@@ -19,34 +19,149 @@
                     anhand
                     unseres Beispiels durchgehen.</p>
 
-                <div>Hovere über die Einzelnen Begriffe für Erklärungen:
-                    <ul>
-                        <li class="font-weight-bold">export</li>
-                        <li class="font-weight-bold">function</li>
-                        <li>function <span class="font-weight-bold">uebungEins(..)</span></li>
-                        <li>function uebungEins(<span class="font-weight-bold">faktor1, faktor2, eingabeProdukt</span>)</li>
-                        <li>function uebungEins(..) <span class="font-weight-bold">{{'{ .. }'}}</span></li>
-                        <li class="font-weight-bold">return ..</li>
-                        <li class="font-weight-bold">(1*2) == 2</li>
-                        <li class="font-weight-bold">Semicolon ;</li>
-                    </ul>
+                <h5>Schlüsselwörter</h5>
+                <!-- export -->
+                <div class="card help-card">
+                    <div class="card-header font-weight-bold" (click)="toggleOpen('export')">export</div>
+                    <div class="card-body" [ngbCollapse]="!isOpen('export')">
+                        <div class="card-text">
+                            <p>export ist ein Schlüsselwort um anzugeben, dass die Funktion nicht nur innerhalb
+                                dieser Datei verwendet werden kann. Zu dem Thema der
+                                <span class="font-weight-bold">Sichtbarkeit</span> kommen wir jedoch später noch.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card help-card">
+                    <div class="card-header" (click)="toggleOpen('function')">
+                        <span class="font-weight-bold">function</span>
+                    </div>
+                    <div class="card-body" [ngbCollapse]="!isOpen('function')">
+                        <div class="card-text">
+                            <p>function ist das Wort mit dem eine Funktion beginnt. Funktionen kennen wir aus
+                                der Schulmathematik: f(x) = x+1.</p>
+
+                            <p>In der Programmiersprache würde das <span class="text-style-code">function f(x)
+                                {{ '{ return x+1 }' }}</span>
+                                heissen.</p>
+
+                            <p>Eine function ist eine Reihe von Anweisungen mit
+                                <span class="font-weight-bold">keinem oder mehreren</span> Eingabeparametern (wie
+                                'x')
+                                und <span class="font-weight-bold">keinem oder genau einem</span> Rückgabewert
+                                (siehe return)
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card help-card">
+                    <div class="card-header" (click)="toggleOpen('functionName')">
+                        <span>function <span class="font-weight-bold">uebungEins(..)</span></span>
+                    </div>
+                    <div class="card-body" [ngbCollapse]="!isOpen('functionName')">
+                        <div class="card-text">
+                            <p>In der Schule sah fast jede Funktion so aus: f(x) = x+1. Aber manche auch so h(x)=..</p>
+                            <p>f, p, a, b oder sonst wie waren nur Namen. Und genauso ist es hier:
+                                <span class="font-weight-bold">uebungEins</span> ist nur der Name.</p>
+                            <p>Aber Namen sind wichtig, schließlich ist das alles hier schon komplex genug,
+                                deswegen sollten wir gute eindeutige Namen verwenden, niemals f,p oder l.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card help-card">
+                    <div class="card-header" (click)="toggleOpen('parameters')">
+                             <span>function uebungEins(<span class="font-weight-bold">faktor1, faktor2,
+                                 eingabeProdukt</span>)</span>
+                    </div>
+                    <div class="card-body" [ngbCollapse]="!isOpen('parameters')">
+                        <div class="card-text">
+                            <p>Die Parameter <span class="font-weight-bold">faktor1, faktor2, eingabeProdukt</span>
+                                sind <span class="text-style-code">Eingaben</span> in die Funktion hinein.
+                            </p>
+
+                            <p>Die Funktion berechnet also irgendetwas was von diesen drei Werten abhängt.
+                                Prinzipiell können keine bis unendlich viele Werte und nicht nur Zahlen, sondern
+                                auch Wörter oder Objekte übergeben werden.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card help-card">
+                    <div class="card-header" (click)="toggleOpen('block')">
+                        <span>function uebungEins(..) <span class="font-weight-bold">{{'{ .. }'}}</span></span>
+
+                    </div>
+                    <div class="card-body" [ngbCollapse]="!isOpen('block')">
+                        <div class="card-text">
+                            <p>Die Geschweiften Klammern haben sich etabliert um einen <span
+                                    class="font-weight-bold">Block</span>
+                                zu kennzeichnen.</p>
+                            <p>So wie die mathematischen runden Klammern funktionieren, so ähnlich sind die
+                                Geschweiften. Was zwischen {{'{ und }'}} passiert, bleibt auch dort ;).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card help-card">
+                    <div class="card-header" (click)="toggleOpen('return')">
+                        <span class="font-weight-bold">return</span> ..
+                    </div>
+                    <div class="card-body" [ngbCollapse]="!isOpen('return')">
+                        <div class="card-text">
+                            <p>So wie die Parameter die <span class="font-weight-bold">Eingabe</span> der
+                                Funktion darstellen, so stellt das was hinter <span class="font-weight-bold">return
+                                    </span> kommt die <span class="font-weight-bold">Ausgabe</span> dar.
+                            </p>
+
+                            <p>Wird die Anweisung return erreicht, wird der Block (s.o.) verlassen. In diesem
+                                Fall ist das unsere Funktion, welche den dahinter stehenden Wert zurückgibt;
+                                also <span class="text-style-code">(1*2) == 1</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card help-card">
+                    <div class="card-header" (click)="toggleOpen('math')">
+                        <span class="font-weight-bold">(1*2) == 1</span>
+                    </div>
+                    <div class="card-body" [ngbCollapse]="!isOpen('math')">
+                        <div class="card-text">
+                            <p>Der Ausdruck <span class="font-weight-bold">(1*2) == 1</span> ist ein
+                                mathematischer Ausdruck, welcher vom Computer einfach ausgewertet wird.</p>
+
+                            <p>Zuerst wird <span class="font-weight-bold">(1*2)</span> ausgewertet. Dann wird
+                                geschaut ob <span class="font-weight-bold">2 == 1</span>ist. Der Rückgabewert ist
+                                damit "wahr" oder "falsch".
+                            </p>
+
+                            <p>Im Gegensatz zur Schulmathematik gibt es einen Unterschied zwischen = und ==.
+                                Bei = macht man eine Zuweisung, während == ein Vergleichsoperator, wie beispielsweise
+                                > oder < ist.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card help-card">
+                    <div class="card-header" (click)="toggleOpen('semicolon')">
+                        <span class="font-weight-bold">Semicolon ;</span>
+                    </div>
+                    <div class="card-body" [ngbCollapse]="!isOpen('semicolon')">
+                        <div class="card-text">
+                            <p>Das Semicolon ist das was in normaler Sprache ein Punkt oder ein Komma ist. Es ist
+                                dazu da einen "Satz" zu beenden, nur dass das was ein Satz ist in Programmiersprache
+                            eine Anweisung ist, wie bspw.: holMirEinenKaffe();</p>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header" (click)="isOpen = 1">Hilfe - Stackblitz</div>
-
-        <div class="card-body" [ngbCollapse]="isOpen !== 1">
-            <h5 class="card-title">Erklärung</h5>
-            <img src="assets/img/uebung-eins/help-1.jpg" class="card-img-top">
-            <div class="card-text">
-                <p>Stackblitz ist die einfachste Möglichkeit Code interaktiv zu verändern ohne, dass du etwas
-                    installieren musst.</p>
-            </div>
-        </div>
-    </div>
 </div>
 
 <hr/>
