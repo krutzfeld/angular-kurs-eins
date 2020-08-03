@@ -8,10 +8,5 @@ export const APP_ROUTES: Routes = [
     {
         path: 'start-with-js-course',
         loadChildren: () => import('../start-with-javascript/start-with-javascript.module').then(m => m.StartWithJavascriptModule)
-    },
-    {
-        path: '',
-        redirectTo: 'start-with-js-course',
-        pathMatch: 'full'
     }
 ];

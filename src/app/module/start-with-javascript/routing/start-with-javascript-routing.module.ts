@@ -8,5 +8,6 @@ import {START_WITH_JAVASCRIPT_ROUTES} from './start-with-javascript-routes.const
     ],
     exports: [RouterModule]
 })
+// @ts-ignore
 export class StartWithJavascriptRoutingModule {
 }
