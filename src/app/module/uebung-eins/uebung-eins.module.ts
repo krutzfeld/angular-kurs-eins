@@ -14,7 +14,6 @@ import {UebungEinsHilfeComponent} from './uebung-eins-hilfe/uebung-eins-hilfe.co
         imports: [
             CoreModule,
             UeEinsRoutingModule,
-            NgbModule
         ],
         providers: [],
     }
