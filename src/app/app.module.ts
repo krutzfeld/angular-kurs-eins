@@ -12,11 +12,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 /* Add Amplify imports */
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import Amplify from 'aws-amplify';
-import awsconfig from '../aws-exports';
 import {Theorie01Module} from './module/theorie-01/theorie01.module';
+import {AWS_MOBILE} from '../aws-exports';
 
 /* Configure Amplify resources */
-Amplify.configure(awsconfig);
+Amplify.configure(AWS_MOBILE);
 
 @NgModule({
   declarations: [
