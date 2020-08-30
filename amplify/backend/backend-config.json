@@ -1,9 +1,0 @@
-{
-	"auth": {
-		"sltheoryapp57eb28b4": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": []
-		}
-	}
-}

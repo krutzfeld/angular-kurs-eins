@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "starting-with-javascript": {
+    "sl-theory-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/starting-with-javascript",
+            "outputPath": "dist/sl-theory-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "starting-with-javascript:build"
+            "browserTarget": "sl-theory-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "starting-with-javascript:build:production"
+              "browserTarget": "sl-theory-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "starting-with-javascript:build"
+            "browserTarget": "sl-theory-app:build"
           }
         },
         "test": {
@@ -114,19 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "starting-with-javascript:serve"
+            "devServerTarget": "sl-theory-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "starting-with-javascript:serve:production"
+              "devServerTarget": "sl-theory-app:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "starting-with-javascript",
-  "cli": {
-    "analytics": "4b4c719d-cefa-421e-a021-4a88608375a7"
-  }
+    }},
+  "defaultProject": "sl-theory-app"
 }

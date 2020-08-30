@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('starting-with-javascript app is running!');
+    expect(page.getTitleText()).toEqual('sl-theory-app app is running!');
   });
 
   afterEach(async () => {
