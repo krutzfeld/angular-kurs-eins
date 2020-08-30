@@ -8,22 +8,24 @@ import {NavigationComponent} from './component/navigation/navigation.component';
 import {CoreModule} from './module/core/core.module';
 import {AppRoutingModule} from './module/routing/app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {AmplifyUIAngularModule} from '@aws-amplify/ui-angular';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        NavigationComponent,
-    ],
-    imports: [
-        CoreModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        UebungEinsModule,
-        NgbModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+  ],
+  imports: [
+    CoreModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    AmplifyUIAngularModule,
+    AppRoutingModule,
+    UebungEinsModule,
+    NgbModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

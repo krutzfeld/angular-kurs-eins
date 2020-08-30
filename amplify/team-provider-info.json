@@ -13,7 +13,8 @@
         },
         "categories": {
             "auth": {
-                "sltheoryappe19df89b": {}
+                "sltheoryappe19df89b": {},
+                "userPoolGroups": {}
             }
         }
     }
