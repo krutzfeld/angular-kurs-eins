@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {Route, Routes} from '@angular/router';
-import {UE_EINS_ROUTES} from '../../module/uebung-eins/routing/ue-eins.constant';
+import {Component, OnInit} from '@angular/core';
+import {Route} from '@angular/router';
+import {THEORIE_01_ROUTES} from '../../module/theorie-01/routing/theorie-01.constant';
 
 @Component({
   selector: 'app-navigation',
@@ -11,7 +11,7 @@ export class NavigationComponent implements OnInit {
 
   constructor() { }
 
-  navItems: Route[] = UE_EINS_ROUTES;
+  navItems: Route[] = THEORIE_01_ROUTES;
 
   ngOnInit(): void {
   }

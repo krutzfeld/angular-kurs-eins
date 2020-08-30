@@ -2,12 +2,12 @@ import {Routes} from '@angular/router';
 
 export const APP_ROUTES: Routes = [
     {
-        path: 'uebung-eins',
-        loadChildren: () => import('../uebung-eins/uebung-eins.module').then(m => m.UebungEinsModule)
+        path: 'theorie-01',
+        loadChildren: () => import('../theorie-01/theorie01.module').then(m => m.Theorie01Module)
     },
     {
         path: '',
-        redirectTo: 'uebung-eins',
+        redirectTo: 'theorie-01',
         pathMatch: 'full'
     }
 ];

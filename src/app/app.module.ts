@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './component/app/app.component';
-import {UebungEinsModule} from './module/uebung-eins/uebung-eins.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NavigationComponent} from './component/navigation/navigation.component';
@@ -14,6 +13,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import Amplify from 'aws-amplify';
 import awsconfig from '../aws-exports';
+import {Theorie01Module} from './module/theorie-01/theorie01.module';
 
 /* Configure Amplify resources */
 Amplify.configure(awsconfig);
@@ -29,7 +29,7 @@ Amplify.configure(awsconfig);
     BrowserAnimationsModule,
     AmplifyUIAngularModule,
     AppRoutingModule,
-    UebungEinsModule,
+    Theorie01Module,
     NgbModule
   ],
   providers: [],
