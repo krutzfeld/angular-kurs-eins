@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"sltheoryappe19df89b": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
