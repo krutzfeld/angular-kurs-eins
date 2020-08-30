@@ -9,10 +9,6 @@ import {CoreModule} from './module/core/core.module';
 import {AppRoutingModule} from './module/routing/app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AmplifyUIAngularModule} from '@aws-amplify/ui-angular';
-import awsconfig from '../aws-exports';
-import {Amplify} from 'aws-amplify';
-
-Amplify.configure(awsconfig);
 
 @NgModule({
   declarations: [
