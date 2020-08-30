@@ -10,6 +10,11 @@
             "StackName": "amplify-sltheoryapp-dev-112245",
             "StackId": "arn:aws:cloudformation:eu-central-1:437873007641:stack/amplify-sltheoryapp-dev-112245/5db8dfe0-eaa2-11ea-8b1a-0692dc978eb4",
             "AmplifyAppId": "d36260oasr18t8"
+        },
+        "categories": {
+            "auth": {
+                "sltheoryapp57eb28b4": {}
+            }
         }
     }
 }

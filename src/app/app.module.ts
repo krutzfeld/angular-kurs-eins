@@ -8,7 +8,15 @@ import {NavigationComponent} from './component/navigation/navigation.component';
 import {CoreModule} from './module/core/core.module';
 import {AppRoutingModule} from './module/routing/app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {AmplifyUIAngularModule} from '@aws-amplify/ui-angular';
+
+
+/* Add Amplify imports */
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import Amplify from 'aws-amplify';
+import awsconfig from '../aws-exports';
+
+/* Configure Amplify resources */
+Amplify.configure(awsconfig);
 
 @NgModule({
   declarations: [
